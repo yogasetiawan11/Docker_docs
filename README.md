@@ -1,11 +1,11 @@
 
 # What is Docker
-Docker is an open-source platform that allows you to automate the deployment, scaling, and management of applications using containerization. Containers package your application code together with all its dependencies, libraries, and configuration files, so it can run consistently across different computing environments.
+Docker is an open-source platform for containerization that allows you to automate the deployment, scaling, and management of applications using containerization. Containers package your application code together with all its dependencies, libraries, and configuration files, so it can run consistently across different computing environments.
 
 ## Infrastructure of Docker
-<img width="1225" height="501" alt="Image" src="https://github.com/user-attachments/assets/0f1448bc-22dc-45a2-bcb0-c8f8cf37bf45" />
+<img width="351" height="143" alt="Image" src="https://github.com/user-attachments/assets/f38f166f-1c3b-4d11-a4bd-b287c347997e" />
 
-In this picture when you use model Hypervisor on the right when you're using this model you have to maintai pyshical servers so there's a lot of maintenance there has to be a team who mantain all of this pyshical servers. whenever there are new patches, whenever there are security fixes or whatever is the case. you have to maintain your data center.
+In this picture when you use model Hypervisor on the right when you're using this model you have to maintain pyshical servers so there's a lot of maintenance there has to be a team who mantain all of this pyshical servers. whenever there are new patches, whenever there are security fixes or whatever is the case. you have to maintain your data center.
 
 Whereas if your using model on the left picture it can be create ec2 intance, or creating VM on top of pyshical servers, using this approach your mantenace is less. unless you own that pyshical server. so many organization has sifted to this approach. because everybody use cloud provider or people looking for to reduce the maintenace or organization are not willing to mantain their own data center so this is the main reason. 
 
@@ -26,7 +26,7 @@ there are 3 main command:
 - docker run  -> run containers from docker images
 - docker push  -> push docker image to public/private registries to shared the docker images.
 
-<img width="725" height="410" alt="Image" src="https://github.com/user-attachments/assets/cf699513-0b4b-452b-b221-3ffdd0341a96" />
+<img width="306" height="165" alt="Image" src="https://github.com/user-attachments/assets/ba716745-1db6-4b30-9542-2cbe939d57bc" />
 
 ## Understanding Terminology in docker (inspired by docker docs)
 - ``Docker CLI``	The Docker CLI is the command-line interface for interacting with the Docker Engine. It provides commands like docker run, docker build, docker ps, and others to manage Docker containers, images, and services.
@@ -57,5 +57,5 @@ there are 3 main command:
 or 
 
 ```bash
-sudo apt docker.io
+sudo apt install docker.io
 ```
