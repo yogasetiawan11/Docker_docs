@@ -59,3 +59,35 @@ or
 ```bash
 sudo apt install docker.io
 ```
+## Verify The Docker has installed
+Run this Command
+``docker run hello-world ``
+
+The Output would be
+```bash
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+```
+
+## Login With your Docker Hub
+After installation done proceed authenticate your terminal with docker or login to your Docker Hub
+
+Use this command 
+
+```bash
+docker login --username (enter your dockerhub username)
+**example**
+docker login --username yogasn
+```
+
+# Build your first Docker Image
+You need to change the username and repo accordingly in the command below
+``docker build -t yogas4/path-to-your-repo:latest . ``
+
+explanation of the Command above 
+- ``docker build`` This represent you will build Docker image from Docker File
+- ``-t`` Tag to as a markup if you don't use a tag your image will be lost 
+- ``yogas4`` This is a username in your Docker registry
+- ``/path`` This contain your repo where you will store your Docker file and application
+- ``:latest`` This is a version of your Tag where you can say V1, V2 etc
+- `` . `` The dot . specifies that the current directory is the location of the Dockerfile and all the files needed to build the image.
