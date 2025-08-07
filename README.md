@@ -3,7 +3,7 @@
 Docker is an open-source platform for containerization that allows you to automate the deployment, scaling, and management of applications using containerization. Containers package your application code together with all its dependencies, libraries, and configuration files, so it can run consistently across different computing environments.
 
 ## Infrastructure of Docker
-<img width="351" height="143" alt="Image" src="https://github.com/user-attachments/assets/f38f166f-1c3b-4d11-a4bd-b287c347997e" />
+<img width="1662" height="718" alt="Image" src="https://github.com/user-attachments/assets/81419d6c-375b-43cf-be09-7f7371899be3" />
 
 In this picture when you use model Hypervisor on the right when you're using this model you have to maintain pyshical servers so there's a lot of maintenance there has to be a team who mantain all of this pyshical servers. whenever there are new patches, whenever there are security fixes or whatever is the case. you have to maintain your data center.
 
@@ -15,7 +15,7 @@ the diagram above looks simmilar but The major difference is that container are 
 So a container is a package which is combination of your application + application library/dependencies + system dependencies (python etc).
 
 # Docker Architecture
-![Image](https://github.com/user-attachments/assets/ed861c08-de51-465e-bf85-ea356e10a70e)
+<img width="1022" height="550" alt="Image" src="https://github.com/user-attachments/assets/abc7d333-d16d-4810-9ebf-3005fe70d93f" />
 
 This picture clearly indicates that Docker Daemon is a brain of docker, if docker is killed, stops working for some reasons, Docker can be dead
 
@@ -26,7 +26,7 @@ there are 3 main command:
 - docker run  -> run containers from docker images
 - docker push  -> push docker image to public/private registries to shared the docker images.
 
-<img width="306" height="165" alt="Image" src="https://github.com/user-attachments/assets/ba716745-1db6-4b30-9542-2cbe939d57bc" />
+<img width="1355" height="562" alt="Image" src="https://github.com/user-attachments/assets/6c04ff7c-55e7-4769-919e-5fa5d1a90d49" />
 
 ## Understanding Terminology in docker (inspired by docker docs)
 - ``Docker CLI``	The Docker CLI is the command-line interface for interacting with the Docker Engine. It provides commands like docker run, docker build, docker ps, and others to manage Docker containers, images, and services.
