@@ -69,8 +69,59 @@ Hello from Docker!
 This message shows that your installation appears to be working correctly.
 ```
 
+# Build your first Docker Image
+You need to change the username and repo accordingly in the command below
+```bash
+docker build -t yogas4/my_first_docker:latest .
+```
+
+explanation of the Command above 
+- ``docker build`` This represent you will build Docker image from Docker File
+- ``-t`` Tag to as a markup if you don't use a tag your image will be lost 
+- ``yogas4`` This is a username in your Docker registry
+- ``/path`` This contain your repo where you will store your Docker file and application
+- ``:latest`` This is a version of your Tag where you can say V1, V2 etc
+- `` . `` The dot . represent that Dockerfile in the same Directory
+
+Output of the Above command 
+
+```bash
+Step 5/6 : ENV NAME world
+ ---> Running in 902360b0097b
+ ---> Removed intermediate container 902360b0097b
+ ---> 50ca3b446592
+Step 6/6 : CMD ["python3", "app.py"]
+ ---> Running in 220c8d43e71c
+ ---> Removed intermediate container 220c8d43e71c
+ ---> 1cc893691ed0
+Successfully built 1cc893691ed0
+Successfully tagged yogas4/my_first_docker:latest
+```
+
+## Verify If Docker has created
+```bash
+docker images
+```
+
+Output
+```bash
+REPOSITORY               TAG                     IMAGE ID       CREATED              SIZE
+yogas4/my_first_docker   latest                  1cc893691ed0   About a minute ago   557MB
+```
+
+## Run Your First Container
+```bash
+docker push -it yogas4/my_first_docker:latest
+```
+
+Output 
+
+```bash
+hello
+```
+
 ## Login With your Docker Hub
-After installation done proceed authenticate your terminal with docker or login to your Docker Hub
+Before you push to Docker Hub you must Login to your Docker HUb If it has done you can proceed push your Docker Images
 
 Use this command 
 
@@ -80,14 +131,21 @@ docker login --username (enter your dockerhub username)
 docker login --username yogasn
 ```
 
-# Build your first Docker Image
-You need to change the username and repo accordingly in the command below
-``docker build -t yogas4/path-to-your-repo:latest . ``
+## Push The Image to Docker Hub
+```bash
+docker push yogas4/my_first_docker
+```
 
-explanation of the Command above 
-- ``docker build`` This represent you will build Docker image from Docker File
-- ``-t`` Tag to as a markup if you don't use a tag your image will be lost 
-- ``yogas4`` This is a username in your Docker registry
-- ``/path`` This contain your repo where you will store your Docker file and application
-- ``:latest`` This is a version of your Tag where you can say V1, V2 etc
-- `` . `` The dot . specifies that the current directory is the location of the Dockerfile and all the files needed to build the image.
+Output
+
+```bash
+Using default tag: latest
+The push refers to repository [docker.io/yogas4/my_first_docker]
+5013d20fc7c2: Pushed
+7f69ec9bb59a: Pushed
+107284f29743: Pushed
+107cbdaeec04: Mounted from library/ubuntu
+latest: digest: sha256:c6154796d19b6041f35d6dec319f28e053f23ac44251911e62cc804970758a04 size: 1155
+```
+
+Finnaly you have finished this step :v
