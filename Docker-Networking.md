@@ -1,7 +1,7 @@
 # what is Docker Networking
 Docker container in ability for container to communicate and connect with other containers, Container run isolated on the Host and need a way to communicate with the other.
 
-Containers have Networking enabled by default you can followed this command to check.
+Containers have Networking enabled by default you can followed this command to check it.
 ```bash
 docker network ls
 ```
@@ -12,7 +12,7 @@ NETWORK ID     NAME      DRIVER    SCOPE
 ************   none      null      local
 ```
 # Why Networking?
-There's 2 reason why you need attach Networking to Containers. 
+There are 2 reason why you need attach Networking to Containers. 
 1. You should connect 1 Container to another Container because each of the Containers might have different function like Frontend and Backend Container and obviously these have to talk each other.
 
 2. You might want good isolation of your container example, You have container which contain Payment session then you want isolated this container to your Public accessible container like Login container, this is where you have to isolated you container Because this Payment container there's sensitive Information.
