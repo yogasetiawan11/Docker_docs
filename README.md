@@ -69,7 +69,19 @@ Hello from Docker!
 This message shows that your installation appears to be working correctly.
 ```
 
-# Build your first Docker Image
+## Login With your Docker Hub
+Before you push to Docker Hub you must Login to your Docker Hb If it has done you can proceed push your Docker Images
+
+Use this command 
+
+```bash
+docker login --username (enter your dockerhub username)
+**example**
+docker login --username yogasn
+```
+
+
+## Build your first Docker Image
 You need to change the username and repo accordingly in the command below
 ```bash
 docker build -t yogas4/my_first_docker:latest .
@@ -111,7 +123,7 @@ yogas4/my_first_docker   latest                  1cc893691ed0   About a minute a
 
 ## Run Your First Container
 ```bash
-docker push -it yogas4/my_first_docker:latest
+docker run -it yogas4/my_first_docker:latest
 ```
 
 Output 
@@ -120,15 +132,9 @@ Output
 hello
 ```
 
-## Login With your Docker Hub
-Before you push to Docker Hub you must Login to your Docker HUb If it has done you can proceed push your Docker Images
-
-Use this command 
-
+## Stop container that are running
 ```bash
-docker login --username (enter your dockerhub username)
-**example**
-docker login --username yogasn
+docker stop CONTAINERID
 ```
 
 ## Push The Image to Docker Hub
@@ -148,4 +154,6 @@ The push refers to repository [docker.io/yogas4/my_first_docker]
 latest: digest: sha256:c6154796d19b6041f35d6dec319f28e053f23ac44251911e62cc804970758a04 size: 1155
 ```
 
-Finnaly you have finished this step :v
+
+
+Finally you have finished this step :v
