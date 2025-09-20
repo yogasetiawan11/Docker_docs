@@ -42,31 +42,30 @@ xxxxxxxxxxxx        host                host
 ```
 You can attached This new Network to the containers. just follow this command
 ```bash
-docker run -d --net=my_bridge --name db training/postgres
+docker run -d  --name db --net=my_bridge nginx/latest
 ```
 
 This way, you can run multiple containers on a single host platform where one container is attached to the default network and the other is attached to the my_bridge network.
 
 These containers are completely isolated with their private networks and cannot talk to each other.
 
-<img width="300" height="367" alt="Image" src="https://github.com/user-attachments/assets/a7eaeaf9-3246-425c-b12a-fd6d00124a10" />
+<img width="720" height="448" alt="Image" src="https://github.com/user-attachments/assets/e6485f7d-ad01-440a-b6f2-de9407591d33" />
 
 you can also enable to connect your container to ``my_bridge`` or anything you have and communicate each other
 
 ```bash
 docker connect network my_bridge web
 ```
-<img width="720" height="448" alt="Image" src="https://github.com/user-attachments/assets/e6485f7d-ad01-440a-b6f2-de9407591d33" />
 
 ## Host Networking
 When you use this option the container has access to the Host's Network stack, and shares the Host's network name space. This means that this container will use the same networking configuration and IP address as the Host. 
 
 Example run Container using Host network:
 ```bash
-docker run --network="host" <name_image> <command>
+docker run -d --name test-host --network="host" nginx:latest
 ```
 
-Keep in mind when you use this option your container is less isolated from the Host's system. and has access to all network resources, It can perform any potential security risk, so use this with caution.
+Keep in mind when you use this option (Host network) your container is less isolated from the Host's system. and has access to all network resources,Because It uses Host's IP address. It can perform any potential security risk, so use this with caution.
 
 ## Overlay Network
-This enables communication between container accross different Docker Host machine.
+This enables communication between container accross different Docker Host machine. Overlay Network quite technical It's often use with Orchertration Tolls such as Kuberenetes or Docker swarm. If you only use Docker to containerized your app you can use Bridge and Host based on your need (often used is Bridge)
